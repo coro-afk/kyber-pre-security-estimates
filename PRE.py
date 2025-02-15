@@ -1,5 +1,5 @@
 from math import log
-from Kyber_failure import p2_cyclotomic_error_probability
+from PRE_failure import p2_cyclotomic_error_probability
 from MLWE_security import MLWE_summarize_attacks, MLWEParameterSet
 from proba_util import build_mod_switching_error_law
 
@@ -52,21 +52,21 @@ if __name__ == "__main__":
     ps_paranoid = KyberParameterSet(256, 3329, 4, 2, 2, 11, 5)
 
     # Analyses
-    print ("Kyber512 (light):")
+    print ("PRE512 (light):")
     print ("--------------------")
     print ("security:")
     MLWE_summarize_attacks(Kyber_to_MLWE(ps_light))
     summarize(ps_light)
     print ()
 
-    print ("Kyber768 (recommended):")
+    print ("PRE768 (recommended):")
     print ("--------------------")
     print ("security:")
     MLWE_summarize_attacks(Kyber_to_MLWE(ps_recommended))
     summarize(ps_recommended)
     print ()
 
-    print ("Kyber1024 (paranoid):")
+    print ("PRE1024 (paranoid):")
     print ("--------------------")
     print ("security:")
     MLWE_summarize_attacks(Kyber_to_MLWE(ps_paranoid))
