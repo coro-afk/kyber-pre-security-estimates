@@ -43,6 +43,11 @@ def p2_cyclotomic_final_error_distribution(ps):
     
     # Add the noise e2
     F = law_convolution(E, chi_eta2)
+    
+    # Additional error due to mod switching of re-key
+    if ps.drv != 12:
+        rerror_rv = build_mod_switching_error_law(ps.q, 2**ps.drv)
+        F = law_convolution(F, rerror_rv)
     return F
 
 def p2_cyclotomic_error_probability(ps):
