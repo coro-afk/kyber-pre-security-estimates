@@ -1,5 +1,7 @@
-# communication costs and failure for a kyber-based PRE scheme
+# Communication costs and failure rate for a kyber-based proxy re-encryption scheme
 
-Kyber.py tests the communication costs and failure of cpapke.
+This is a test script forked from [the security estimates of Kyber](https://github.com/pq-crystals/security-estimates)
 
-PRE.py tests the communication costs and failure of re-encrypted ciphertexts.
+### Usage
+
+PRE.py: test the communication costs of proxy re-encryption, and the failure rate of the re-encrypted ciphertexts.
